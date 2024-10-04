@@ -1,2 +1,4 @@
 ## Conceitos de Hardware e Software - Perguntas
 ### Semana 3 - 23/09/2024
+1. Quais são as **unidades funcionais** de um sistema computacional?
+    **R:** Processador, memória principal e dispositivos de entrada/saída.
