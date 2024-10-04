@@ -1,4 +1,4 @@
-## Introdução à Sistemas Operacionais
+## Introdução à Sistemas Operacionais - Perguntas
 ### Semana 3 - 16/09/2024
 
 1. Como seria um computador sem um SO? Quais são suas duas principais funções?
