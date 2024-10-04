@@ -8,3 +8,6 @@
     - **Unidade Lógica e Aritimética:** Responsável por realizar operações lógicas (testes e comparações) e atitiméticas (soma e subtração).
     - **Registradores:** Responsáveis por armazenar dados temporariamente. Funcionam como uma memória de alta velocidade com pouco espaço, dentro do processador.
     - **Clock:** Sincroniza todas as funções do processador. A sincronização é feita por um sinal que pulsa em um ciclo. O sinal em si vem de um cristal de quartzo polarizado.
+
+3. Como a memória principal de um computador é organizada?
+    **R:** Sua organização é firnada por unidades de acesso chamadas células (atualmente a maioria é de 8 bits). <br>O Acesso do conteúdo é realizado através da especificação de um número, chamado endereço. O endereço é único para uma célula. Quando o programa deseja ler ou escrever em uma célula, primeiro especifica qual o endereço antes de realizar a operação. <br>É Classificada em função de sua volatilidade, ou seja, pela capacidade de preservar o conteúdo mesmo sem uma fonte de energia. RAM (Random Access Memory) -> Volátil; ROM (Read-Only Memory) && EPROM (Erasable Programmable ROM) -> Não volátil.
