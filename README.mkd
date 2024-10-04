@@ -1,0 +1,48 @@
+# Sistemas Operacionais
+Este repositório é destinado à disciplina de sistemas operacionais do 4° semestre do Bacharelado em Sistemas de Informação do IFSP - Campus Votuporanga.
+> Este é um arquivo unico que conterá todo o material.
+
+## Introdução à Sistemas Operacionais
+### Semana 3 - 16/09/2024
+
+1. Como seria um computador sem um SO? Quais são suas duas principais funções?
+    
+    Um computador sem Sistema Operacional seria inutilizável para leigos, já que o SO serve como intermediário entre o hardware e o usuário. Sem ele, o manuseio seria extremamente difícil de gerenciar os recursos e executar softwares. Desta forma, conclui-se que as duas principais funções do software são: Gerenciamento de Recursos e Interface de Usuário.
+    
+2. Defina o conceito de uma máquina em camadas.
+    
+    Uma máquina de camadas é um modelo onde o sistema é organizado em níveis/camadas. Cada camada é construida acima da anterior e só interage com a camada abaixo dela. Abstraindo da complexidade das camadas inferiores e promove a modularidade e facilidade de manutenção.
+    
+3. Quais os tipos de SOs existentes?
+    
+    Batch, tempo real, multiusuario, monousuario, multiprocessador.
+    
+4. Porque dizemos que existe uma subutilização de recursos em sistemas monoprogramáveis?
+    
+    Pois, independente do hardware, apenas um programa é executado por vez.
+    
+5. Quais as vantagens dos sistemas multiprogramáveis?
+    
+    Diferente dos monoprogramaveis, estes podem executar vários programas simultaneamente. Melhor utilizando a CPU, aumentando a produtividade e tendo mais responsividade (no sentido de várias requisições sendo atendidas).
+    
+6. Um sistema monousuário pode ser um sistema multiprogramável? Dê um exemplo.
+    
+    Sim, não há impedimentos que um sistema monousuário seja multiprogramável. A maioria dos SOs atuais são assim: Windows 10.
+    
+7. Quais são os tipos de sistemas multiprogramáveis?
+    
+    Batch Processing Systems, Time-sharing Systems, Real-time Systems.
+    
+8. Como funcionam os sistemas de tempo compartilhado? quais as vantagens em utilizá-lo?
+    
+    Nesse sistema, o tempo da CPU é dividido entre múltiplos usuários ou processos que são agendados, permitindo execução simultânea.
+    
+    Dentre as vantagens: Maior interatividade, Melhor utilização dos Recursos, Multitarefa.
+    
+9. Qual a grande diferença entre sistemas de tempo compartilhado e tempo real?
+    
+    A principal diferença está em que o tempo compartilhado doca em ter um tempo razoável de resposta para múltiplos processos, já o tempo real são projetados com a finalidade de garantir respostas imediatas a certos eventos.
+    
+10. Qual a grande diferença entre sistemas fortemente acoplados e fracamente acoplados?
+    
+    Fracamente acoplados são sistemas de rede em que os componentes da rede podem ser usados para aumentar o poder de processamento, como uma única máquina, mas não perdendo a característica de independência dos sistemas. Já os fortemente acoplados, eles perdem essa característica de individualidade, sendo vistos como um só.
