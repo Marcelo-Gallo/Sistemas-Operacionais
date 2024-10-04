@@ -2,3 +2,9 @@
 ### Semana 3 - 23/09/2024
 1. Quais são as **unidades funcionais** de um sistema computacional?
     **R:** Processador, memória principal e dispositivos de entrada/saída.
+
+2. Quais são os componentes de um processador e quais são suas funções?
+    - **Unidade de Controle:** Responsável por gerenciar as atividades de todos os componentes do computador. Por exemplo: Gravação de dados em disco, busca de instruções na memória, dentre outras.
+    - **Unidade Lógica e Aritimética:** Responsável por realizar operações lógicas (testes e comparações) e atitiméticas (soma e subtração).
+    - **Registradores:** Responsáveis por armazenar dados temporariamente. Funcionam como uma memória de alta velocidade com pouco espaço, dentro do processador.
+    - **Clock:** Sincroniza todas as funções do processador. A sincronização é feita por um sinal que pulsa em um ciclo. O sinal em si vem de um cristal de quartzo polarizado.
