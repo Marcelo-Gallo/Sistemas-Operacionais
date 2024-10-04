@@ -47,3 +47,8 @@ Este repositório é destinado à disciplina de sistemas operacionais do 4° sem
 10. Qual a grande diferença entre sistemas fortemente acoplados e fracamente acoplados?
     
     Fracamente acoplados são sistemas de rede em que os componentes da rede podem ser usados para aumentar o poder de processamento, como uma única máquina, mas não perdendo a característica de independência dos sistemas. Já os fortemente acoplados, eles perdem essa característica de individualidade, sendo vistos como um só.
+
+## Conceitos de Hardware e Software
+----------RESUMO POR VIR----------
+### Página 38 - Livro "Arquitetura de Sistemas Operacionais". Francis Berenger Machado, Luiz Paulo Maia
+1. Quais são as **unidades funcionais** de um sistema computacional?
