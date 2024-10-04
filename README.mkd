@@ -3,6 +3,7 @@ Este repositório é destinado à disciplina de sistemas operacionais do 4° sem
 > Este é um arquivo unico que conterá todo o material.
 
 ## Introdução à Sistemas Operacionais
+----------RESUMO POR VIR----------
 ### Semana 3 - 16/09/2024
 
 1. Como seria um computador sem um SO? Quais são suas duas principais funções?
