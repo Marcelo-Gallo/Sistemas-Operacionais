@@ -9,5 +9,68 @@
     - **Registradores:** Responsáveis por armazenar dados temporariamente. Funcionam como uma memória de alta velocidade com pouco espaço, dentro do processador.
     - **Clock:** Sincroniza todas as funções do processador. A sincronização é feita por um sinal que pulsa em um ciclo. O sinal em si vem de um cristal de quartzo polarizado.
 
-3. Como a memória principal de um computador é organizada?
+3. Como a **memória principal** de um computador é **organizada**?
     **R:** Sua organização é firnada por unidades de acesso chamadas células (atualmente a maioria é de 8 bits). <br>O Acesso do conteúdo é realizado através da especificação de um número, chamado endereço. O endereço é único para uma célula. Quando o programa deseja ler ou escrever em uma célula, primeiro especifica qual o endereço antes de realizar a operação. <br>É Classificada em função de sua volatilidade, ou seja, pela capacidade de preservar o conteúdo mesmo sem uma fonte de energia. RAM (Random Access Memory) -> Volátil; ROM (Read-Only Memory) && EPROM (Erasable Programmable ROM) -> Não volátil.
+
+4. Descreva os ciclos de **gravação e leitura da memoria principal**.
+    **R:** Dois registradores trabalham em conjunto, MAR e MBR.
+    MAR especifica o endereço que será acessado. MBR guarda o conteudo de uma ou mais celulas da memoria apos a leitura ou guarda o dado que será gravado.
+
+5. Qual o numero máximo de **celulas endereçadas** em arqiteturas com **MAR** de 16, 32 e 64 bits?
+    Esse numero é definido pelo tamanho do MAR. Supondo, de forma generia, que esse registrador possua n bits, o total de celulas enderaçadas e 2^n, partindo de 0 até (2^n - 1). Nestas arquiteturas seriam enderaçadas no máximo 2^16, 2^32 e 2^64 respecivamente.
+
+6. O que são **memórias voláteis e não voláteis**?
+    - Voláteis: As informações ficam armazenadas temporariamente e se perdem quando o suprimento de energia é cortado.
+    - Não Voláveis: As informações são armazenadas permanentemente, isto é, mesmo que o suprimento de energia seja cortado, as informações não se perdem.
+
+7. Conceitue **memória cache** e apresente as principais vantagens no seu uso.
+    **R:** É uma memoria volátil de alta velocidade e pequeno armazenamento. Sua proposta é armazenar parte do conteudo da memória principal para diminuir o tempo de acesso.
+
+8. Qual a importancia do principio da **localidade** na eficiencia da memória cache?
+    **R:** Localidade é a tendencia do processador referenciar instruções e dados na memoria principal localizados em endereços proximos, buscar eles. Garante que após a transferencia de um novo bloco da memória principal para a cache, haverá uma alta probabilidade de cache hits (quando o conteudo solicitado pela CPU é encontrado no cache) em futuruas referencias.
+
+9. Quais os beneficios de uma arquitetura de **memória cache** com multiplos níveis?
+    **R:** Atualmente existem 3 níveis de cache, sendo que os dois primeiros trabalham quase na velocidade do processador e estão fisicamente muito próximos. Por se tratar de uma memória de baixo armazenamento, o acesso é substanciamente mais rapido (porem a ocorrencia de hits é menor). Logo, os multiplos níveis fazem com que a velocidade geral dos processamentos aumente se bem aplicado o principio da localidade.
+
+10. Quais as **diferenças** entre a **memória principal** e a **secundária**?
+    **R:** O acesso à memória secundária é lento, porem sua capacidade de armazenamento é superior e com um custo bem mais baixo quando comparado a memória principal. Na prática, a mempria secundária faz acessos em milissegundos e a principal em nanosegundos.
+
+11. Diferencie as funções básicas dos **dipositivos de E/S**.
+    **R:** A priori, ambos são dispositivos que permitem a comunicação entre o Sistema Computacional e o mundo externo. Como o nome transparece, são responsáveis por fornecer dados para o sistema (dispositivos de entrada) e exibir algo gerado pelo sistema (dispositivo de saida).
+
+12. Caracterize os **barramentos processador-memória, E/S e backplane**.
+    **R:** _**Barramento:**_ ou Bus é um meio de comunicação compartilhado que permite a comunicação entre as unidades funcionais de um Sistema Computacional. São condutores por onde trafegam informações. Possui linhas de controle e linhas de dados.
+    - Processador-Mamória: Curta extensão e alta velocidade, otimizando a transfertencia de informações entre o processador e a memória.
+    - E/S: maior extensão, mais lentos e fgazem a conexão de diferentes dispositivos.
+    - Bus Adapter: Compatibiliza a velocidade de barramentos diferentes.
+    - backplaneBarramento intermediario entre os barramentos E/S e processador-Memoria. A principal vantagem das arquiteturas que usam esse tipo de barramento é reduzir o numero de adaptadores existentes no barramento.
+
+13. Como a tecnica de **pipeling** melhora o desempenho dos sistemas computacionais?
+    **R:** É uma tecnica que permite que o processador execute multiplas instruções ao mesmo tempo com diferentes estágios. Uma instrução é dividida em pequenas partes, Com estas partes o processador, através de várias unidades funcionais pipeline, funciona permirindo que enquanto uma instrução está sendo executada, outra esta na etapa anterior e assim sucessivamente para quantos estágios o processador possua.
+
+14. Compare as arquiteturas de **processadores RISC e CISC**.
+    **R:** A qarquitetura de um processador é um conjunto de instruções especidficvas designadas pelo fabricante.
+    - RISC, Reduced Instruction Set Computers, é caracterizada por possuir poucas instruções e ser bastante simples no geral. Na sua maioria, as instruções não acessam diretamente a memoria principal, trabalham principalmente com registradores (existentes em grande numero). Essas caracteristicas permitem que as instruções sejam rapidamente execuitadas e facilitam a implementação de pipeling.
+    - CISC, Complex Instruction Set Computers, possui instruções complexas interpretadas por microprogramas. Poucos registradores e qualuqer instrução pode referenciar a memoria principal. Nesse tipo de arquitetura, a implementação de pipeling é mais dificil.
+    Nos processadores RISC, um prohrama em linguagem de máquina é executado diretamente pelo hardware, mas isso não ocorre nos processadores CISC.
+
+15. Conceituea tecnica de **benchmark** e como é sua realização.
+    **R:** É uma tecnica que permite a analise de desempenho e a comparação entre sistemas computacionais. Nele, um conjunto de programas é executado em cada sistema e o tempo de execução é comparado. A escolha dos programas é criteriosa e reflete os diferentes tipos de programas.
+
+16. Por que o **codigo-objeto** gerado pelo tradutor ainda não pode ser executado?
+    **R:** Normalmente, um programa usa(chama) sub-rotinas externas e o tradutor não tem capacidade de associa-las. Isso será feito pelo utilitario linker.
+
+17. Por que a execução de **programas interpretados** é mais lenta que a de **programas compilados**?
+    **R:** Programs interpretados demoram para traduzir as instruções toda vez que é executado, já qu3e não existe a geração de um código executável. O interpretador traduz a instrução e a executa de imediato.
+
+18. Quais as funções do linker?
+    **R:** Gerar um unico programa executravel a partir de um ou mais módulos-objeto. Suas funções básicas são resolver todas as referencias simbolicas e reservar memória para a execução do programa. Outra função importante é realocar a memória (região) na qual o programa será carregado para execução.
+
+19. Qual a principalç função do loader.
+    **R:** Carregar na memoria principal um programa para ser executado.
+
+20. Quais as facilidades oferecidas pelo depurador?
+    - Acompanhar a execução de um programa instrução por instrução.
+    - Possibilita a alteração e visualização do conteudo de variaveis.
+    - Implementar pontos de parada (Breakpoints) dentro do programa.
+    - mEspecificar que, tofa vez que o conteudo de uma variavel for alterado/modificado, o programa envie uma mensagem (Watchpoint).
